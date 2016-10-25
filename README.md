@@ -23,4 +23,5 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Have fun with the app! And commit the changes
+
