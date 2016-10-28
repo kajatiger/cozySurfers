@@ -1,2 +1,34 @@
-<h1>Contact us:</h1>
-<p>If you want to contat us, please write us an email to cozySurfers@ocean.de</p>
+    <div class="container" id="contact">
+      <h1>Contact Us</h1>
+      <p>If you have a question, please feel free to write us a message or like us on facebook.</p>
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+        </div> <!-- col-xs-6 end -->
+        <div class="col-xs-12 col-md-8">
+          <form action=”/login” method=”post” name=”login”>
+            <div class="form-group">
+              <label for="message" class="sr-only">Message *</label>
+              <textarea style="resize:none" cols="40" rows="5" class="form-control" placeholder="Write me a message here..." id="message" required="required" minlength=10 name="message" title="enter your message"></textarea>
+              <p id="visible-comment"></p>
+            </div> <!-- form group end -->
+            <div class="form-group">
+              <label for="email" class="sr-only">Email *</label>
+              <input type="email" name="email" title="enter your email" class="form-control" placeholder="for.example@mail.de" id="email" required="required" minlength=5>
+            </div> <!-- form group end -->
+            <div class="form-group">
+              <label for="name" class="sr-only">Name *</label>
+              <input type="name" class="form-control" placeholder="Name" id="name" required="required" minlength=1 name="name" title="enter your name">
+            </div> <!-- form group end -->
+            <input class="btn btn-default" type="submit" value="Submit" id="button">
+          </form>
+        </div> <!-- col-xs-12 end -->
+      </div> <!-- row end -->
+      <div class="stalker-poster">
+        <h3><span class="glyphicon glyphicon-map-marker"></span>  Where can you find us?</h3>
+        <p>Come check out our Spot <strong>Tempelhofer Fulgfeld</strong> in Tempelhof</p>
+        <div id="map"></div>
+      </div> <!-- stalker poster end -->
+    </div> <!-- contact container end -->
+
+
+

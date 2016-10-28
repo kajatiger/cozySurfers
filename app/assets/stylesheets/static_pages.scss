@@ -1,3 +1,86 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+* {
+  margin: 0;
+}
+
+body {
+	height: 100%;
+	max-width: 100%;
+	background-color: #e5eb85; 
+  color: #34495e;
+  padding-top: 95px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/*NAVBAR STYLING*/
+#customnav ul li a {
+	color: white;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	padding: 20px 20px 20px;
+	font-family: 'Titillium Web', Futura, Arial, sans-serif;
+	transition: color 600ms;
+}
+#homebutton {
+	color: white;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+#customnav a:hover {
+  color: #ff007f; 
+  text-decoration: none;
+}
+.navbar {
+	color: white;
+	background-color: #5d98db; /*#34495e*/
+	position: fixed;
+	width: 100%;
+	top: 0;
+	font-family: 'Titillium Web', Futura, Arial, sans-serif;
+	z-index: 1;
+}
+.glyphicon {
+	margin: 7px;
+}
+.dropdown-menu {
+	background-color: #005053;
+}
+
+/*IMGAE CIRCLE*/
+.img-circle {
+	margin-left: 400px;
+}
+
+/* ABOUT ROWS*/
+
+.thumbnail {
+	padding: 0; /* since I added the imgs to the thumbnails, the page has a x-overflow*/
+}
+
+/* STICKY FOOTER */
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142px; 
+}
+.site-footer {
+  background: #5d98db;
+}
+
+
+
