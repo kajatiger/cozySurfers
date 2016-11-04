@@ -2,6 +2,13 @@ Rails.application.routes.draw do
 	resources :orders, only: [:index, :show, :create, :destroy]
 
   resources :products
+  get 'products/index'
+
+  get 'products/new'
+
+  get 'products/show'
+
+
   get 'static_pages/about'
 
   get 'static_pages/contact'
