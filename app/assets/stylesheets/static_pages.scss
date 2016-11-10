@@ -20,6 +20,7 @@ body {
 /*NAVBAR STYLING*/
 #customnav ul li a {
 	color: white;
+	font-size: 1.3em;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -28,7 +29,7 @@ body {
 	transition: color 600ms;
 }
 #homebutton {
-	color: white;
+	color: #e5eb85;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -39,7 +40,7 @@ body {
 }
 .navbar {
 	color: white;
-	background-color: #5d98db; /*#34495e*/
+	background-color: #5d98db;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -50,7 +51,7 @@ body {
 	margin: 7px;
 }
 .dropdown-menu {
-	background-color: #005053;
+	background-color: #5d98db;
 }
 
 /*IMGAE CIRCLE*/
@@ -62,6 +63,23 @@ body {
 
 .thumbnail {
 	padding: 0; /* since I added the imgs to the thumbnails, the page has a x-overflow*/
+}
+
+/*BUTTON STYLE*/
+#button {
+	color: white;
+	font-family: 'Titillium Web', Futura, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+#button:hover {
+	color: #ff007f;
+}
+#button-default {
+	color: #454275;
+	font-family: 'Titillium Web', Futura, Arial, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 }
 
 /* STICKY FOOTER */
@@ -81,6 +99,19 @@ body {
 .site-footer {
   background: #5d98db;
 }
+.copyright {
+	text-align: left;
+	margin: 20px;
+}
+.follow-twitter {
+	float: right;
+	margin: 3px;
+}
+.fb-like {
+	float: right;
+	margin: 3px;
+}
+
 
 
 

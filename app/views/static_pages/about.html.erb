@@ -9,8 +9,9 @@
       <%= image_tag("fixBoard.jpg", size: "400x400", class: "img-responsive") %>
       <div class="caption">
         <h3>The Community</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">sign up</a> <a href="#" class="btn btn-default" role="button">sign in</a></p>
+        <p>You want to connect with other surfers in Berlin and hang out? Or plan surf trips together with friends? Join our community of cozy Surfers in Berlin and have all the advantages of a membership. </p>
+        <%= link_to 'SIGN IN', products_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'BECOME A MEMBER', products_path, class: "btn btn-primary", id: "button" %>
       </div>
     </div>
   </div>
@@ -19,8 +20,9 @@
       <%= image_tag("workshop.jpg", size: "400x400", class: "img-responsive") %>
       <div class="caption">
         <h3>Your Surf Shop</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button"><%= link_to 'Surf Shop', products_path %> </a> <a href="#" class="btn btn-default" role="button">Sell your Stuff</a></p>
+        <p>In our online Surf Shop you can find any equipment for surfing. You can sell your own boards and other things as well.</p>
+        <%= link_to 'SURF SHOP', products_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'SELL SOMETHING HERE', products_new_path, class: "btn btn-primary", id: "button" %>
       </div>
     </div>
   </div>
@@ -29,8 +31,9 @@
       <%= image_tag("boardDesign.jpg", size: "400x400", class: "img-responsive") %>
       <div class="caption">
         <h3>Events</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Register for Event</a> <a href="#" class="btn btn-default" role="button">See more</a></p>
+        <p>Many events about surfing are happening in Berlin and elsewhere. Come and find out, if there is something for you. Meet cool people in your City and never miss an event again!</p>
+        <%= link_to 'REGISTER FOR EVENT', root_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'SEE MORE', root_path, class: "btn btn-primary", id: "button" %>
       </div>
     </div>
   </div>
