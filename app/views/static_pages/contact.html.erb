@@ -19,7 +19,7 @@
               <label for="name" class="sr-only">Name *</label>
               <input type="name" class="form-control" placeholder="Name" id="name" required="required" minlength=1 name="name" title="enter your name">
             </div> <!-- form group end -->
-            <input class="btn btn-default" type="submit" value="Submit" id="button">
+              <%= link_to 'send', products_path, class: "btn btn-default btn-lg", type: 'submit', value: 'Submit', id: 'button-default' %>
           </form>
         </div> <!-- col-xs-12 end -->
       </div> <!-- row end -->

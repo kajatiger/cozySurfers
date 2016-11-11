@@ -63,13 +63,13 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'New Product', new_product_path %></li>
           <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <%= form_tag("", method: "get") do %>
-          <%= text_field_tag(:q, params[:q], class: "form-control", placeholder: "Search") %>
-        </div>
-      </form>
-      <%= link_to 'FIND', products_path, class: "btn btn-default btn-lg", id: "button-default" %>
-          <% end %>
+              <%= form_tag("/products", method: "get") do %>
+              <%= text_field_tag(:q, params[:q], class: "form-control", placeholder: "Search") %>
+              <%= submit_tag 'FIND', class: "btn btn-default btn-lg", id: "button-default" %>
+              <% end %> 
+          </form>
+              
+              
    
         </ul>
       </div><!-- /.navbar-collapse -->
