@@ -4,11 +4,21 @@ class StaticPagesController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
   end
 
   def landing_page
-    @products = Product.limit(3)
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    else
+      @products = Product.limit(3)    
+    end
   end
 
   # GET /products/1

@@ -11,29 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="input-group">
+    <%= f.text_field :name, type: "text", class: "form-control", aria_label: "Name", placeholder: "Name of your Product" %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="input-group">
+    <%= f.label :description, class: "input-group-addon" %>
+    <%= f.text_area :description, type: "text", class: "form-control", aria_label: "Product description", placeholder: "Describe your Product" %>
   </div>
 
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+  <div class="input-group">
+    <%= f.label :image_url, class: "input-group-addon" %>
+    <%= f.text_field :image_url, type: "text", class: "form-control", aria_label: "Image", placeholder: "Image url here" %>
   </div>
 
-  <div class="field">
-    <%= f.label :color %>
-    <%= f.text_field :color %>
+  <div class="input-group">
+    <%= f.label :color, class: "input-group-addon" %>
+    <%= f.text_field :color, class: "form-control", placeholder: "Enter the Color of your Product" %>
   </div>
 
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price %>
+  <div class="input-group">
+    <span class="input-group-addon">€</span>
+    <%= f.text_field :price, type: "text", class: "form-control", aria_label: "Amount (to the nearest dollar)", placeholder: "Price in Euro" %>
   </div>
 
   <div class="actions">
