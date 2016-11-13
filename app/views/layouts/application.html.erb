@@ -62,12 +62,11 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'New Product', new_product_path %></li>
-          <form class="navbar-form navbar-left">
-              <%= form_tag("/products", method: "get") do %>
+              <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
               <%= search_field_tag(:q, params[:q], class: "form-control", placeholder: "Search") %>
-              <%= submit_tag 'FIND', class: "btn btn-default btn-lg", id: "button-default" %>
+              <%= submit_tag('FIND', class: "btn btn-default btn-lg", id: "button-default") %>
               <% end %> 
-          </form>
+          
               
               
    
