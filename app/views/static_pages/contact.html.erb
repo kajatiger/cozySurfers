@@ -1,25 +1,28 @@
     <div class="container" id="contact">
       <h1>Contact Us</h1>
+      <%= flash[:notice] %>
+
       <p>If you have a question, please feel free to write us a message or like us on facebook.</p>
+      <%= form_tag("/static_pages/thank_you") do %>
       <div class="row">
         <div class="col-xs-6 col-md-4">
         </div> <!-- col-xs-6 end -->
         <div class="col-xs-12 col-md-8">
-          <form action=”/login” method=”post” name=”login”>
+          <form action="/login" method="post" name="login">
             <div class="form-group">
-              <label for="message" class="sr-only">Message *</label>
-              <textarea style="resize:none" cols="40" rows="5" class="form-control" placeholder="Write me a message here..." id="message" required="required" minlength=10 name="message" title="enter your message"></textarea>
+              <%= text_area_tag :message, nil, class: "form-control", placeholder: "Write me a message here...", style: "resize:none", cols: "40", rows:"5", id: "message", required: "required", minlength: 10, name: "message", title: "enter your message" %>
               <p id="visible-comment"></p>
             </div> <!-- form group end -->
             <div class="form-group">
-              <label for="email" class="sr-only">Email *</label>
-              <input type="email" name="email" title="enter your email" class="form-control" placeholder="for.example@mail.de" id="email" required="required" minlength=5>
+              <%= text_field_tag :email, nil, class: "form-control", placeholder: "for.example@mail.de", type: "email", name: "email", title: "enter your email", id: "email", required: "required", minlength: 5 %>
             </div> <!-- form group end -->
             <div class="form-group">
-              <label for="name" class="sr-only">Name *</label>
-              <input type="name" class="form-control" placeholder="Name" id="name" required="required" minlength=1 name="name" title="enter your name">
+              <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name", type: "name", id: "name", required: "required", minlength: 1, name: "name", title: "enter your name" %>
             </div> <!-- form group end -->
-              <%= link_to 'send', products_path, class: "btn btn-default btn-lg", type: 'submit', value: 'Submit', id: 'button-default' %>
+            <div class="form-group">
+              <%= submit_tag "Send", class: "btn btn-default btn-lg", type: 'submit', id: 'button-default' %> 
+            </div>
+              <% end %>
           </form>
         </div> <!-- col-xs-12 end -->
       </div> <!-- row end -->
@@ -28,6 +31,7 @@
         <p>Come check out our Spot <strong>Tempelhofer Fulgfeld</strong> in Tempelhof</p>
         <div id="map"></div>
       </div> <!-- stalker poster end -->
+
     </div> <!-- contact container end -->
 
 
