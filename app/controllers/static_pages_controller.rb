@@ -26,6 +26,17 @@ class StaticPagesController < ApplicationController
   def show
   end
 
+  def thank_you
+  @name = params[:name]
+  @email = params[:email]
+  @message = params[:message]
+  ActionMailer::Base.mail(:from => @email,
+      :to => 'k.santro@posteo.de',
+      :subject => "A new contact form message from #{@name}",
+      :body => @message).deliver_now
+  end
+
+
   
 
   private
