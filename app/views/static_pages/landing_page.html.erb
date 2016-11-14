@@ -13,10 +13,12 @@
           <div class="carousel-inner" role="listbox"> 
           <% @products.each do |product| %>    
 					<div class="item<%= " active" if product == @products.first %>">
-							<%= image_tag(product.image_url) %>
-              <div class="carousel-caption" id="tree">
+							<%= image_tag(product.image_url, class: "carousel-pair") %>
+              <div class="carousel-pair"><%= product.description %> </div>
+                
+              <div class="carousel-caption">
                 <%= product.name %>
-              </div> <!-- tree end -->
+              </div> 
             </div> <!-- item active end -->
        			<% end %>
           </div> <!-- carousel-inner end -->
@@ -37,13 +39,8 @@
 <div class="jumbotron">
   <h1>Welcome to cozy Surfers Berlin</h1>
   <h2>We connect the community of Surfers in Berlin and provide you with Surf Equipment</h2>
-  <p><%= link_to 'About', static_pages_about_path, class: "btn btn-default btn-lg" %></p>
+  <p><%= link_to 'About', static_pages_about_path, class: "btn btn-default btn-lg", id: "button-default" %></p>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <%= image_tag("fixBoard.jpg", class: "img-responsive img-circle") %>
-  </div>
-</div>
 
 

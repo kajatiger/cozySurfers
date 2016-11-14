@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>About cozy Surfers<small>Learn more about the Berlin Surf Community</small></h1>
+  <h1>About cozy Surfers <small id="small"> Learn more about the Berlin Surf Community</small></h1>
   <p>Berlin has a big community of surfers but not enough surf shops and no meeting spot. We wanted to change that and create cozy Surfers. Here you can connect with other surfers in Berlin, share experiences about surf trips, sell or buy surf boards and order surf equipment.</p>
 </div>
 
@@ -10,8 +10,8 @@
       <div class="caption">
         <h3>The Community</h3>
         <p>You want to connect with other surfers in Berlin and hang out? Or plan surf trips together with friends? Join our community of cozy Surfers in Berlin and have all the advantages of a membership. </p>
-        <%= link_to 'SIGN IN', products_path, class: "btn btn-primary", id: "button" %>
-        <%= link_to 'BECOME A MEMBER', products_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'login', new_user_session_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'BECOME A MEMBER', new_user_session_path, class: "btn btn-primary", id: "button" %>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
       <div class="caption">
         <h3>Events</h3>
         <p>Many events about surfing are happening in Berlin and elsewhere. Come and find out, if there is something for you. Meet cool people in your City and never miss an event again!</p>
-        <%= link_to 'REGISTER FOR EVENT', root_path, class: "btn btn-primary", id: "button" %>
+        <%= link_to 'REGISTER FOR EVENT', new_user_session_path, class: "btn btn-primary", id: "button" %>
         <%= link_to 'SEE MORE', root_path, class: "btn btn-primary", id: "button" %>
       </div>
     </div>

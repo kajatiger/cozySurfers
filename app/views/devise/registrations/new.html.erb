@@ -1,0 +1,46 @@
+<div class="background-image">
+  <div class="row">
+    <div class="col-xs-6 col-md-4"></div>
+    <div class="col-xs-12 col-sm-6 col-md-8"><h2>Sign up</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4"></div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <%= f.label :email, class: "control-label" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "for.example@email.here" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-default", id: "button-default" %>
+      </div>
+    <% end %>
+    </div>
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6 col-sm-4" id="bottom"></div>
+  </div>
+
+</div>
+<div class="row">
+  <%= render "devise/shared/links" %>
+</div>
+
+
+
+
+
+  

@@ -1,0 +1,37 @@
+<div class="background-image">
+  <div class="row">
+    <div class="col-xs-6 col-md-4"></div>
+    <div class="col-xs-12 col-sm-6 col-md-8"><h2>Log in</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4"></div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="col-xs-6 col-sm-4">
+      <div class="form-group">
+        <%= f.label :email, class: "control-label" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "for.example@email.here" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "password" %>
+      </div>
+      <% if devise_mapping.rememberable? -%>
+      <div class="check-box">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end -%>
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-default", id: "button-default" %>
+      </div>
+    <% end %>
+    </div>
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6 col-sm-4" id="bottom"></div>
+  </div>
+
+</div>
+<div class="row">
+  <%= render "devise/shared/links" %>
+</div>

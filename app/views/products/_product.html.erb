@@ -6,10 +6,10 @@
         <p><%= product.description %></p>
         <p><%= product.color %></p>
         <p><%= product.price %></p>
-        <div class="btn btn-default"><%= link_to 'Buy', orders_path %></div>
-        <div class="btn btn-info"><%= link_to 'Show', product %></div>
-        <div class="btn btn-default"><%= link_to 'Edit', edit_product_path(product) %></div>
-        <div class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <div class="btn btn-default"><%= link_to 'Buy', orders_path, id: "button-default" %></div>
+        <div class="btn btn-info"><%= link_to 'Show', product, id: "button-default" %></div>
+        <div class="btn btn-default"><%= link_to 'Edit', edit_product_path(product), id: "button-default" %></div>
+        <div class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, id: "button-default" %></div>
       </div>
     </div>
   </div>

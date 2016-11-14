@@ -54,6 +54,24 @@ body {
 	background-color: #5d98db;
 }
 
+/*CAROUSEL PAIR*/
+.carousel-pair {
+	display: inline-block;
+}
+
+/* LANDING PAGE JUMBO*/
+.jumbotron {
+	background-image: image-url("boardDesign.jpg");
+	padding-bottom: 40px;
+	color: white;
+	margin: 40px
+}
+.jumbotron h1,
+					 h2, {
+	margin: 10px;
+	padding: 17px;
+}
+
 /*IMGAE CIRCLE*/
 .img-circle {
 	margin-left: 400px;
@@ -61,8 +79,37 @@ body {
 
 /* ABOUT ROWS*/
 
+.page-header {
+	background-image: image-url("boardDesign.jpg");
+	padding-bottom: 100px;
+	color: white;
+}
+.page-header h1 {
+	margin: 40px;
+	padding: 17px;
+}
+.page-header p {
+	font-family: Georgia,Times,"Times New Roman",serif;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	margin: 40px;
+	padding-top:0;
+	padding-bottom: 17px;
+	pagging-right: 17px;
+	pagging-left: 17px;
+}
+#small {
+	color: white;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
 .thumbnail {
 	padding: 0; /* since I added the imgs to the thumbnails, the page has a x-overflow*/
+}
+.caption p {
+	font-family: Georgia,Times,"Times New Roman",serif;
+	font-size: 1.3em;
 }
 
 /*BUTTON STYLE*/
@@ -89,6 +136,22 @@ body {
 .thankyou {
 }
 
+.background-image {
+	background-image: image-url("surfboard.jpg");
+	padding-bottom: 200px;
+}
+
+.alert {
+	padding: 3px;
+	margin: 5px;
+}
+
+.alert-link {
+	font-family: Georgia,Times,"Times New Roman",serif;
+}
+.alert-link:hover {
+	color: #ff007f;
+}
 /* STICKY FOOTER */
 
 .page-wrap {
@@ -99,6 +162,10 @@ body {
 .page-wrap:after {
   content: "";
   display: block;
+}
+
+#bottom {
+	margin-bottom: 400px;
 }
 .site-footer, .page-wrap:after {
   height: 142px; 

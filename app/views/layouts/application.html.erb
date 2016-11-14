@@ -56,20 +56,21 @@
           </ul>
         </li>
         
-      </ul>   
+      </ul>  
       
-
-
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+          </li>
           <li><%= link_to 'New Product', new_product_path %></li>
               <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
               <%= search_field_tag(:q, params[:q], class: "form-control", placeholder: "Search") %>
               <%= submit_tag('FIND', class: "btn btn-default btn-lg", id: "button-default") %>
               <% end %> 
-          
-              
-              
-   
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -77,6 +78,9 @@
   
     <%= yield %>
 
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
    </div> <!-- page wrap end --> 
     <footer class="site-footer">
       <div class="follow-twitter">
