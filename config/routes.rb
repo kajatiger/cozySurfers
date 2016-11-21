@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   
   get 'orders/index'
 
-  resources :products
+  resources :products do
+    resources :comments
+  end
+  
   get 'products/index'
 
   get 'products/new'
