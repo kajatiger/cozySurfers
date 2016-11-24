@@ -9,7 +9,9 @@ class CommentsController < ApplicationController
 
 	def create
     @product = Product.find(params[:product_id])
-		@comment = @product.comments.create!(params.require(:comment).permit!)     
+		@comment = @product.comments.create!(params.require(:comment).permit!)
+		@comment.user = current_user
+  	@comment.save     
 		redirect_to product_path(@product)
   end
 
