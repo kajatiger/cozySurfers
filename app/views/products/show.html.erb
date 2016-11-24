@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag(@product.image_url, size: "800x800", class: "img-responsive") %>
-
-
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <%= image_tag(@product.image_url, size: "800x800", class: "img-responsive", id: "product-img") %>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
@@ -30,14 +32,7 @@
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
         <%= @product.description %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<p>
+        <p>
   <strong>Color:</strong>
   <%= @product.color %>
 </p>
@@ -46,22 +41,39 @@
   <strong><span class="glyphicon glyphicon-eur" aria-hidden="true"></span></strong>
   <%= @product.price %>
 </p>
-
-
-<div class="detailBox">
-  <div class="titleBox">
-      <label>Comment Box</label>
+      </div>
     </div>
-
-            <h2>Comments</h2>
-            <%= render @product.comments %>
-
-
-            <h2>Add a comment:</h2>
-            <%= render "comments/form" %>
+  </div>
 </div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <div class="detailBox">
+      <div class="actionBox">
+        <ul class="commentList">
+          <h2>Comments</h2>
+          <%= render @product.comments %>
+        </ul>
+        <h2>Add a comment:</h2>
+        <%= render "comments/form" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-4"></div>
+</div>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %> 
+<%= link_to 'Back', products_path, class: "btn btn-default" %>
 
 

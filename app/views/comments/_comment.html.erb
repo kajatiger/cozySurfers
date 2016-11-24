@@ -1,66 +1,37 @@
 
-<div class="media">
-  <div class="media-left media-middle">
-    <a href="#">
-    		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-    </a>
+<li>
+  <div class="commenter-image">
+    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
   </div>
-  <div class="media-body">
-    <h4 class="media-heading"><%= comment.commenter %></h4>
-    <p>
-		  <b>Comment:</b>
-		  <%= comment.body %>
-		</p>
+    <div class="commentText">
+      <h4 class="media-heading"><%= comment.commenter %></h4>
+      <p>
+  		  <b>Comment:</b>
+  		  <%= comment.body %>
+  		</p>
+      <%= comment.rating %>
+      <%= imdb_style_rating_for @product, current_user %>
+      <div class="small-2 large-4 columns">
+    <% if current_user %>
+      General: <%= rating_for @product, "visual_effects" %>
+      <br>
+      Swag: <%= rating_for @product, "original_score" %>
+      <br>
+      Usability: <%= rating_for @product, "original_score" %>
+      <br>
+      Design: <%= rating_for @product, "custome_design" %>
+    <% end %>
   </div>
-</div>
-
+    </div>
+  </div>
+</li>
 
 <p>
-  <%= link_to 'Destroy Comment', [comment.product, comment],
+  <%= link_to 'Delete Comment', [comment.product, comment],
                :confirm => 'Are you sure?',
-               :method => :delete %>
+               :method => :delete,
+               class: "btn btn-default" %>
+               
 </p>
 
 
-<div class="detailBox">
-    <div class="titleBox">
-      <label>Comment Box</label>
-    </div>
-    <div class="actionBox">
-        <ul class="commentList">
-            <li>
-              <div class="commenter-image">
-              	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              </div>
-              <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-              </div>
-            </li>
-            <li>
-                <div class="commenterImage">
-                  <img src="http://placekitten.com/45/45" />
-                </div>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
-                    </div>
-            </li>
-            <li>
-                <div class="commenterImage">
-                  <img src="http://placekitten.com/40/40" />
-                </div>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                </div>
-            </li>
-            </ul>
-        <form class="form-inline" role="form">
-            <div class="form-group">
-                <input class="form-control" type="text" placeholder="Your comments" />
-            </div>
-            <div class="form-group">
-                <button class="btn btn-default">Add</button>
-            </div>
-        </form>
-    </div>
-</div>
