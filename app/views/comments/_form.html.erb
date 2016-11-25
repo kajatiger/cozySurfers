@@ -1,17 +1,34 @@
-<%= form_for([@product, @product.comments.build]) do |f| %>
-  <div class="form-group">
-    <%= f.label :commenter %><br />
-    <%= f.text_field :commenter, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :body %><br />
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :rating %><br />
-    
-  </div>
-  <div class="form-group">
-    <%= f.submit %>
-  </div>
+<% if signed_in? %>
+  <h2>Add a comment:</h2>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+    <div class="form-group">
+      <%= f.label :commenter %><br />
+      <%= f.text_field :commenter, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body %><br />
+      <%= f.text_area :body, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :rating %><br />
+              <%= imdb_style_rating_for @product, current_user %>
+              <div class="small-2 large-4 columns">
+                <% if current_user %>
+                  General: <%= rating_for @product, "visual_effects" %>
+                  <br>
+                  Swag: <%= rating_for @product, "original_score" %>
+                  <br>
+                  Usability: <%= rating_for @product, "original_score" %>
+                  <br>
+                  Design: <%= rating_for @product, "custome_design" %>
+                <% end %>
+      
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+
+
+  <% end %>
+
 <% end %>

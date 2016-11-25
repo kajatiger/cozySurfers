@@ -1,37 +1,31 @@
+<div class="row">
+  <div class="col-xs-6">
+    <div class="detailBox">
+      <div class="actionBox">
+        <ul class="commentList">
+          
+      <li>
+        <div class="commenter-image">
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </div>
+          <div class="commentText">
+            <h4 class="media-heading"><%= comment.commenter %></h4>
+            <p>
+        		  <b>Comment:</b>
+        		  <%= comment.body %>
+              <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+        		</p>
+            <div class="rating">
+              <div class="rated" data-score="<%= comment.rating %>"></div>
 
-<li>
-  <div class="commenter-image">
-    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-  </div>
-    <div class="commentText">
-      <h4 class="media-heading"><%= comment.commenter %></h4>
-      <p>
-  		  <b>Comment:</b>
-  		  <%= comment.body %>
-  		</p>
-      <%= comment.rating %>
-      <%= imdb_style_rating_for @product, current_user %>
-      <div class="small-2 large-4 columns">
-    <% if current_user %>
-      General: <%= rating_for @product, "visual_effects" %>
-      <br>
-      Swag: <%= rating_for @product, "original_score" %>
-      <br>
-      Usability: <%= rating_for @product, "original_score" %>
-      <br>
-      Design: <%= rating_for @product, "custome_design" %>
-    <% end %>
-  </div>
+             
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
     </div>
   </div>
-</li>
-
-<p>
-  <%= link_to 'Delete Comment', [comment.product, comment],
-               :confirm => 'Are you sure?',
-               :method => :delete,
-               class: "btn btn-default" %>
-               
-</p>
-
-
+</div>

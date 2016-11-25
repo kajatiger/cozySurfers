@@ -1,0 +1,11 @@
+Notes:
+
+<p>
+  <%= link_to 'Delete Comment', [comment.product, comment],
+               :confirm => 'Are you sure?',
+               :method => :delete,
+               class: "btn btn-default" %>
+               
+</p>
+
+this is the link to delete comments under the products. i took it out because any user was able to delete anyone else's comment. until i find a solution, i will save it here.
