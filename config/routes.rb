@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   post '/rate' => 'rater#create', :as => 'rate'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "user_registrations" }
+
   resources :users
 
 	resources :orders, only: [:index, :show, :create, :destroy]

@@ -35,6 +35,10 @@ gem 'ratyrate'
 
 gem 'will_paginate', '~> 3.1.1'
 
+gem 'activeadmin', '~> 1.0.0.pre4'
+
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

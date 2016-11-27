@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create(:name => "seed-generated Product", :description => "I created this Product using the seed.rb form in my app folder")
+Product.create(:name => "seed-generated Product", :description => "I created this Product using the seed.rb form in my app folder")AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
