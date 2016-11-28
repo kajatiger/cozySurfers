@@ -31,8 +31,6 @@ gem 'devise'
 
 gem 'cancancan', '~> 1.10'
 
-gem 'ratyrate'
-
 gem 'will_paginate', '~> 3.1.1'
 
 gem 'activeadmin', '~> 1.0.0.pre4'
