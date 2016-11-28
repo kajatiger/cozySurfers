@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-	before_action :authenticate_admin_user!
+  before_action :authenticate_user!, only:[:create]
+  before_action :authenticate_admin_user!, only:[:destroy]
 
 	def index
     @comments = Comment.paginate(:page => params[:page], :per_page => 5)
