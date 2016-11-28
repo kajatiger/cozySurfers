@@ -13,7 +13,6 @@ class CommentsController < ApplicationController
 		@comment = @product.comments.new(params.require(:comment).permit!)
 		@comment.user = current_user
   	@comment.save     
-		redirect_to product_path(@product)
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
