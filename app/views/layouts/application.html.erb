@@ -66,6 +66,14 @@
               <%= link_to('Login', new_user_session_path) %>
             <% end %>
           </li>
+
+         <li>
+           <% if admin_user_signed_in? %>
+             <%= link_to('Logout Admin', destroy_admin_user_session_path, :method => :delete) %>
+           <% else %>
+             <%= link_to('Login Admin', new_admin_user_session_path) %>
+           <% end %>
+         </li>
           <li><%= link_to 'New Product', new_product_path %></li>
               <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
               <%= search_field_tag(:q, params[:q], class: "form-control", placeholder: "Search") %>
