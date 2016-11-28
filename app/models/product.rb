@@ -11,5 +11,4 @@ class Product < ApplicationRecord
 	def highest_rating_comment
   	comments.rating_desc.first
 	end
-	ratyrate_rateable 'visual_effects', 'original_score', 'director', 'custome_design'
 end
