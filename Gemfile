@@ -46,6 +46,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
 
+group :test do
+  # need to require this for the belongs_to method testing in rspec
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'

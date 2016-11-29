@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 
 	def create
     @product = Product.find(params[:product_id])
-		@comment = @product.comments.new(params.require(:comment).permit!)
+		@comment = @product.comments.create!(params.require(:comment).permit!)
 		@comment.user = current_user
   	@comment.save     
     respond_to do |format|
