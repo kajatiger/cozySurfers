@@ -6,6 +6,8 @@ class Ability
     can :manage, User, id: user.id
     cannot :destroy, Comment
   end
+
+  
   
 end
 
