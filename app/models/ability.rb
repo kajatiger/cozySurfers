@@ -7,8 +7,6 @@ class Ability
     cannot :destroy, Comment
   end
 
-  
-  
 end
 
  # Define abilities for the passed in user here. For example:
