@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get 'users/sign_in'
+
+  get 'users/show'
+
 	resources :orders, only: [:index, :show, :create, :destroy]
   
   get 'orders/index'
