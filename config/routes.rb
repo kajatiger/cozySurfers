@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+
+  post 'payments/create'
   
   get 'products/index'
 
