@@ -3,7 +3,7 @@ require 'rails_helper'
 describe AdminUser do
 	context "has an account" do
 		before do
-			@admin_user 	= AdminUser.create!(email: "admin@user.com", password: "password")
+			@admin_user = FactoryGirl.create(:admin_user)
 		end
 
 		it "has no encrypted_password" do
@@ -17,3 +17,4 @@ describe AdminUser do
 	end
 	
 end
+
