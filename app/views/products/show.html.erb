@@ -40,6 +40,10 @@
 <p>
   <strong><span class="glyphicon glyphicon-eur" aria-hidden="true"></span></strong>
   <%= @product.price %>
+  <%= form_tag "/payments/create" do %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
+
 </p>
       </div>
     </div>
