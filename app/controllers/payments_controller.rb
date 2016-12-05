@@ -15,15 +15,7 @@ class PaymentsController < ApplicationController
      Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
    end
 
-   dispute = Stripe::Dispute.retrieve("dp_17sGETLpSdVJN1iVw8BHvseP")
-   dispute.evidence = {
-     :customer_email_address => @user.email,
-     :shipping_date => Date.today ,
-     :shipping_documentation => @order.details
-   }
-   dispute.save
-
-   redirect_to product_path(product)
+   redirect_to product_path(@product)
 
    rescue Stripe::CardError => e
      body = e.json_body
