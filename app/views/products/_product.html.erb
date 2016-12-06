@@ -1,16 +1,15 @@
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <div class="caption">
-        <%= image_tag(product.image_url, size: "400x400", class: "img-responsive") %>
-        <h3><%= product.name %></h3>
-        <p><%= product.description %></p>
-        <p><%= product.color %></p>
-        <p><%= product.price %></p>
-        <div class="btn btn-default"><%= link_to 'Buy', orders_path, id: "button-default" %></div>
-        <div class="btn btn-info"><%= link_to 'Show', product, id: "button-default" %></div>
-        <div class="btn btn-default"><%= link_to 'Edit', edit_product_path(product), id: "button-default" %></div>
-        <div class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, id: "button-default" %></div>
-        
+          <%= image_tag(product.image_url, size: "400x400", class: "img-responsive") %>
+          <h3><%= product.name %></h3>
+          <p><%= product.description %></p>
+          <p><%= product.color %></p>
+          <p><%= product.price %></p>
+          <div class="btn btn-default"><%= link_to 'Buy', orders_path, id: "button-default" %></div>
+          <div class="btn btn-info"><%= link_to 'Show', product, id: "button-default" %></div>
+          <div class="btn btn-default"><%= link_to 'Edit', edit_product_path(product), id: "button-default" %></div>
+          <div class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, id: "button-default" %></div>
       </div>
     </div>
   </div>

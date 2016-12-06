@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% cache @product do %>
 <div class="row">
   <div class="col-xs-12 col-md-8">
     <%= image_tag(@product.image_url, size: "800x800", class: "img-responsive img-zoom", id: "product-img", data_zoom_image: @product.image_url) %>
@@ -50,6 +51,7 @@
     </div>
   </div>
 </div>
+  <% end %>
 
   </div>
 </div>
