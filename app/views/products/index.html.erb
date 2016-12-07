@@ -8,9 +8,9 @@
 
 
 <div class="row">
-	  <% cache(cache_key_for_products) do %>
-		  <%= render @products %>
-		<% end %>
+	<% @products.each do |product| %>		  
+		<%= render @products %>
+	<% end %>
 </div>
 
 <br>

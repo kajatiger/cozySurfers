@@ -1,6 +1,7 @@
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <div class="caption">
+        <% cache product do %>
           <%= image_tag(product.image_url, size: "400x400", class: "img-responsive") %>
           <h3><%= product.name %></h3>
           <p><%= product.description %></p>
@@ -10,6 +11,7 @@
           <div class="btn btn-info"><%= link_to 'Show', product, id: "button-default" %></div>
           <div class="btn btn-default"><%= link_to 'Edit', edit_product_path(product), id: "button-default" %></div>
           <div class="btn btn-danger"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, id: "button-default" %></div>
+        <% end %>
       </div>
     </div>
   </div>
