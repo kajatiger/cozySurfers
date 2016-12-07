@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_admin_user!, only:[:destroy]
 
 	def index
-    @comments = Comment.paginate(:page => params[:page], :per_page => 5)
+    @comments = Comment.paginate(:page => params[:page], :per_page => 3)
 	end
 
 	def show

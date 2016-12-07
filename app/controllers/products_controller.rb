@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
         search_term = params[:q]
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       else
-        @products = Product.paginate(:page => params[:page], :per_page => 10)
+        @products = Product.paginate(:page => params[:page], :per_page => 5)
       end
     end
   else
@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
         search_term = params[:q]
         @products = Product.where("name ilike ?", "%#{search_term}%")
       else
-        @products = Product.paginate(:page => params[:page], :per_page => 10)
+        @products = Product.paginate(:page => params[:page], :per_page => 5)
       end
     end
   end
