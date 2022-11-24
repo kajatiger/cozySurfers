@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/activeadmin/inherited_resources.git
+  remote: https://github.com/activeadmin/inherited_resources.git
   revision: 4434f0ae72f790cf371728838c927c338100555d
   specs:
     inherited_resources (1.6.0)
@@ -81,7 +81,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.2)
-    dalli (2.7.6)
+    dalli (3.2.3)
     debug_inspector (0.0.2)
     devise (4.2.0)
       bcrypt (~> 3.0)
